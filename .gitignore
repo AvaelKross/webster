@@ -14,3 +14,18 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+.DS_store
+
+.rspec
+/log
+/tmp
+/db/*.sqlite3
+/spec/tmp
+config/initializers/secret_token.rb
+config/database.yml
+config/secrets.yml
+
+/vendor/bundle
+
+.rvmrc
