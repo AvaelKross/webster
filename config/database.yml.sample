@@ -1,0 +1,24 @@
+defaults: &defaults
+  adapter: postgresql
+  encoding: unicode
+  reconnect: false
+  pool: 5
+  host: localhost
+
+development:
+  <<: *defaults
+  database: webster_development
+  username: 
+  password: 
+
+test:
+  <<: *defaults
+  database: webster_test
+  username: 
+  password: 
+
+production:
+  <<: *defaults
+  database: webster
+  username: 
+  password: 
