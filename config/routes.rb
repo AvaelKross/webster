@@ -5,7 +5,14 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'admin/dashboard#index'
+
+  devise_scope :user do
+    get '/registration/:token' => 'users#register_form', as: :register
+    put '/registration/:token' => 'users#finish_creating', as: :finish
+  end
+
+  post '/gateway' => 'gateway#send'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

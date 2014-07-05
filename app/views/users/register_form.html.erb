@@ -1,0 +1,14 @@
+Please provide some info to finish registration<br />
+<%= flash[:alert] %>
+<%= simple_form_for @user, url: finish_path(token: params[:token]), method: :put, html: { class: 'form-horizontal', autocompete: "off" },
+wrapper: :horizontal_form,
+wrapper_mappings: {
+  check_boxes: :horizontal_radio_and_checkboxes,
+  radio_buttons: :horizontal_radio_and_checkboxes,
+  file: :horizontal_file_input,
+  boolean: :horizontal_boolean
+} do |m| %>
+  <%= m.input :password %>
+  <%= m.input :password_confirmation %>
+  <%= m.submit %>
+<% end %>
