@@ -13,7 +13,7 @@ set :deploy_to, "/home/#{user}/webster/#{rails_env}"
 set :app_path, "#{deploy_to}/#{current_path}"
 set :repository, 'git@github.com:AvaelKross/webster.git'
 set :branch, 'master'
-set :shared_paths, ['config/database.yml', 'config/secrets.yml', 'tmp']
+set :shared_paths, ['config', 'tmp']
 set :keep_releases, 10
 set :rvm_path, '/home/apps/.rvm/scripts/rvm'
 
@@ -35,7 +35,7 @@ namespace :unicorn do
   set :unicorn_pid, "#{app_path}/tmp/pids/unicorn.pid"
   set :start_unicorn, %{
 cd #{app_path}
-bundle exec unicorn -c #{app_path}/config/unicorn.rb -E production
+bundle exec unicorn -c #{app_path}/config/unicorn.rb -E production -D
 }
 
 # Start task
