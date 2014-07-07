@@ -9,7 +9,7 @@ working_directory  app_path
 pid                "#{app_path}/tmp/pids/unicorn.pid"
 stderr_path        "/home/apps/webster/production/shared/tmp/log/unicorn.err.log"
 stdout_path        "/home/apps/webster/production/shared/tmp/log/unicorn.out.log"
-socket_file        "#{app_path}/shared/unicorn.sock"
+listen             "#{app_path}/shared/unicorn.sock", :backlog => 64
 
 before_fork do |server, worker|
   ActiveRecord::Base.connection.disconnect!
