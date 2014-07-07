@@ -15,7 +15,7 @@ set :repository, 'git@github.com:AvaelKross/webster.git'
 set :branch, 'master'
 set :shared_paths, ['config/database.yml', 'config/secrets.yml', 'tmp']
 set :keep_releases, 10
-set :rvm_path, '/home/apps/.rvm/bin/rvm'
+set :rvm_path, '/home/apps/.rvm/scripts/rvm'
 
 task :environment do
   invoke 'rvm:use[ruby-2.1.1@default]'
