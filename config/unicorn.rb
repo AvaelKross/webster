@@ -7,8 +7,8 @@ listen             '127.0.0.1:8080'
 user               'apps', 'apps'
 working_directory  app_path
 pid                "#{app_path}/tmp/pids/unicorn.pid"
-stderr_path        "/home/apps/webster/production/shared/tmp/log/unicorn.err.log"
-stdout_path        "/home/apps/webster/production/shared/tmp/log/unicorn.out.log"
+stderr_path        "/home/apps/webster/tmp/log/unicorn.err.log"
+stdout_path        "/home/apps/webster/tmp/log/unicorn.out.log"
 listen             "#{app_path}/shared/unicorn.sock", :backlog => 64
 
 before_fork do |server, worker|
