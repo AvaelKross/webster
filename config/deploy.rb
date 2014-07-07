@@ -5,8 +5,9 @@ require 'mina/rvm'
 
 set :rails_env, 'production'
 set :domain, '188.226.165.163'
-set :port, 22
+set :port, 5123
 set :user, 'apps'
+set :term_mode, nil
 
 set :deploy_to, "/home/#{user}/webster/#{rails_env}"
 set :app_path, "#{deploy_to}/#{current_path}"
@@ -14,10 +15,10 @@ set :repository, 'git@github.com:AvaelKross/webster.git'
 set :branch, 'master'
 set :shared_paths, ['config/database.yml', 'config/secrets.yml', 'tmp']
 set :keep_releases, 10
-set :rvm_path, '/usr/local/rvm/scripts/rvm'
+set :rvm_path, '/home/apps/.rvm/bin/rvm'
 
 task :environment do
-  invoke 'rvm:use[ruby-2.1.1@rails411]'
+  invoke 'rvm:use[ruby-2.1.1@default]'
 end
 
 #delay. Setup task
