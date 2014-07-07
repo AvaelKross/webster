@@ -40,7 +40,7 @@ group :development do
 end
 
 group :production do
-  gem 'unicorn', '4.8.2'
+  gem 'unicorn'
   gem 'archive-zip'
 end
 
