@@ -1,4 +1,10 @@
 GIT
+  remote: git://github.com/alekseenkoss77/smsru.git
+  revision: e11169e84b20603216317079ba1b6789c6d7169c
+  specs:
+    smsru (0.0.3)
+
+GIT
   remote: git://github.com/gregbell/active_admin.git
   revision: 0e0b3694bace985f355135f9628ea7918c3695d2
   specs:
@@ -194,6 +200,7 @@ DEPENDENCIES
   rails (= 4.1.1)
   sass-rails (~> 4.0.3)
   simple_form (~> 3.1.0.rc1)
+  smsru!
   spring
   turbolinks
   uglifier (>= 1.3.0)

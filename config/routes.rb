@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     put '/registration/:token' => 'users#finish_creating', as: :finish
   end
 
-  post '/gateway' => 'gateway#send'
+  post 'gateway' => 'gateway#send_message'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

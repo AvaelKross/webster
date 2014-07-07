@@ -8,15 +8,14 @@ class UserMailer < ActionMailer::Base
           from: "admin@webstermg.ru" )
   end
 
-  def custom_mail(user, sender_email, sender_name, subject, text, from)
-    @user = user
+  def custom_mail(to, sender_email, sender, subject, text)
+    @to = to
     @sender_email = sender_email
-    @sender_name = sender_name
     @text = text
-    mail( to: @user.email,
+    mail( to: to,
           subject: subject,
           reply_to: sender_email,
-          from: from )
+          from: sender )
   end
 
 end
