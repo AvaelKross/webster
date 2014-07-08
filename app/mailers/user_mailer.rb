@@ -5,7 +5,8 @@ class UserMailer < ActionMailer::Base
     email_with_name = "#{@user.email} <#{@user.email}>"
     mail( to: email_with_name,
           subject: "Invite to Webster management system",
-          from: "admin@webstermg.ru" )
+          from: "admin@webstermg.ru",
+          delivery_method_options: delivery_options )
   end
 
   def custom_mail(to, sender_email, sender, subject, text)
@@ -15,7 +16,19 @@ class UserMailer < ActionMailer::Base
     mail( to: to,
           subject: subject,
           reply_to: sender_email,
-          from: sender )
+          from: sender,
+          delivery_method_options: delivery_options )
   end
+
+  protected
+    
+    def delivery_options
+      { 
+        user_name: Settings.mailer_username,
+        password: Settings.mailer_password,
+        address: Settings.mailer_host,
+        port: Settings.mailer_port
+      }
+    end
 
 end

@@ -1,0 +1,11 @@
+<%= simple_form_for :settings, url: admin_settings_update_path, method: :put, html: { class: 'form-horizontal', autocompete: "off" } do |f| %>
+  <fieldset>
+    <%= f.input :mailer_host, input_html: { value: Settings.mailer_host, autocomplete: 'off' } %>
+    <%= f.input :mailer_port, input_html: { value: Settings.mailer_port, autocomplete: 'off' } %>
+    <%= f.input :mailer_username, input_html: { value: Settings.mailer_username, autocomplete: 'off' } %>
+    <%= f.input :mailer_password, input_html: { value: Settings.mailer_password, autocomplete: 'off' }, as: :string %>
+    <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+      <i class="icon-ok icon-white"></i> Save
+    <% end %>
+  </fieldset>
+<% end %>

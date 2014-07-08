@@ -30,6 +30,8 @@ gem 'activeadmin', github: 'gregbell/active_admin'
 
 gem 'smsru', github: 'alekseenkoss77/smsru'
 
+gem "rails-settings-cached", "0.4.1"
+
 group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'

@@ -1,2 +1,2 @@
 Hello!
-Follow <%= link_to "link", register_url(token: @user.reg_token) %> to finish registration.
+Follow <%= link_to "link", register_url(token: @user.reg_token, host: Settings.host) %> to finish registration.
