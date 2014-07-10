@@ -72,7 +72,7 @@ namespace :delayed_job do
     queue 'echo "-----> Start Delayed job"'
     queue! %{
 cd #{app_path}
-RAILS_ENV=#{rails_env} bundle exec bin/delayed_job -n 4 start
+RAILS_ENV=#{rails_env} bin/delayed_job -n 4 start
 }
   end
 
@@ -80,7 +80,7 @@ RAILS_ENV=#{rails_env} bundle exec bin/delayed_job -n 4 start
     queue 'echo "-----> Stop Delayed job"'
     queue! %{
 cd #{app_path}
-RAILS_ENV=#{rails_env} bundle exec bin/delayed_job stop
+RAILS_ENV=#{rails_env} bin/delayed_job stop
 }
   end
 end
