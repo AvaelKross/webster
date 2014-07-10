@@ -66,6 +66,25 @@ echo >&2 "Not running"
   end
 end
 
+namespace :delayed_job do
+  desc "Start delayed_job process"
+  task :start => :environment do
+    queue 'echo "-----> Start Delayed job"'
+    queue! %{
+cd #{app_path}
+RAILS_ENV=#{rails_env} bundle exec bin/delayed_job -n 4 start
+}
+  end
+
+  task :stop do
+    queue 'echo "-----> Stop Delayed job"'
+    queue! %{
+cd #{app_path}
+RAILS_ENV=#{rails_env} bundle exec bin/delayed_job stop
+}
+  end
+end
+
 # Deploy task
 # ==============================================================================
 desc "deploys the current version to the server."
@@ -76,9 +95,11 @@ task :deploy => :environment do
     invoke 'deploy:link_shared_paths'
     invoke 'rails:db_migrate'
     invoke 'rails:assets_precompile'
+    invoke 'delayed_job:stop'
 
     to :launch do
       invoke :'unicorn:restart'
+      invoke :'delayed_job:start'
     end
   end
 end

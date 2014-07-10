@@ -8,15 +8,13 @@ class GatewayController < ApplicationController
     # send mail
     if proj.email_on?
       email_text = "FROM landing page: "+params[:phone]+": "+params[:text]
-      UserMailer.custom_mail(proj.email, "no-reply@webstermg.ru", "qweqwe <no-reply@webstermg.ru>", "hujhuj!", email_text).deliver
-      Message.create(project: proj, text: email_text, message_type: "e-mail")
+      proj.send_email(email_text)
     end
 
     # send sms
     if proj.sms_on?
       sms_text = params[:phone]+": "+params[:text]
-      Smsru::Sender.sms_send(proj.phone, sms_text)
-      Message.create(project: proj, text: sms_text, message_type: "sms")
+      proj.send_sms(sms_text)
     end
 
     respond_to do |format|

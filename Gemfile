@@ -32,6 +32,9 @@ gem 'smsru', github: 'alekseenkoss77/smsru'
 
 gem "rails-settings-cached", "0.4.1"
 
+gem 'delayed_job_active_record'
+gem "daemons"
+
 group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
