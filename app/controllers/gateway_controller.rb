@@ -3,7 +3,7 @@ class GatewayController < ApplicationController
 
   def send_message
     proj = Project.where(site: request.referer).first
-    return render json: {success: false} unless proj.present?
+    return render json: {success: false, site: request.referer} unless proj.present?
     
     # send mail
     if proj.email_on?
