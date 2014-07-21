@@ -18,6 +18,7 @@
 #  email_sender_email :string(255)
 #  email_sender       :string(255)
 #  email_subject      :string(255)
+#  sms_from           :string(255)
 #
 
 require 'test_helper'

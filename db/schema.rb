@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140717084956) do
+ActiveRecord::Schema.define(version: 20140721092417) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(version: 20140717084956) do
     t.string   "email_sender_email"
     t.string   "email_sender"
     t.string   "email_subject"
+    t.string   "sms_from"
   end
 
   create_table "settings", force: true do |t|

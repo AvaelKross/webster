@@ -9,6 +9,10 @@ ActiveAdmin.register_page "Settings" do
         panel "Main settings" do
           render partial: 'main_settings'
         end
+
+        panel "Sms settings" do
+          render partial: 'sms_settings'
+        end
       end
 
       column do
@@ -24,12 +28,11 @@ ActiveAdmin.register_page "Settings" do
                                                         :mailer_username, 
                                                         :mailer_password, 
                                                         :mailer_host, 
-                                                        :mailer_port )
-    p settings_params
+                                                        :mailer_port,
+                                                        :sms_api_id )
     settings_params.each do |param|
       Settings[param[0]] = param[1] if param[1].present?
     end
-    Rails.application.reload_routes! if settings_params[:start_page_controller].present?
     redirect_to admin_settings_path, notice: "Settings have been saved!"
   end
 
