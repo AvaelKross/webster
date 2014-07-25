@@ -4,10 +4,11 @@ class Sender
 
     def send_sms(message)
       project = message.project
-      Smsru::API.send_sms(  project.phone, 
-                            message.text, 
-                            Settings.sms_api_id, 
-                            project.sms_from )
+      numbers = project.phone.gsub(/\s+/, "").split(",")
+      Smsru::API.group_send(  numbers, 
+                              message.text, 
+                              Settings.sms_api_id, 
+                              project.sms_from )
       message.update_columns(status: true)
     end
     handle_asynchronously :send_sms
