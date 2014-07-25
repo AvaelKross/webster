@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+ruby '2.1.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
 # Use postgresql as the database for Active Record
@@ -27,13 +27,14 @@ gem 'jbuilder', '~> 2.0'
 # gem 'sdoc', '~> 0.4.0',          group: :doc
 # Admin panel
 gem 'activeadmin', github: 'gregbell/active_admin'
-
-gem 'smsru', github: 'alekseenkoss77/smsru'
-
+# Sending sms via sms.ru
+gem 'smsru', github: 'avaelkross/smsru'
+# Settings
 gem "rails-settings-cached", "0.4.1"
-
+# Delayed jobs
 gem 'delayed_job_active_record'
 gem "daemons"
+gem "delayed_job_web"
 
 group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
@@ -47,6 +48,11 @@ end
 group :production do
   gem 'unicorn'
   gem 'archive-zip'
+end
+
+group :test do
+  gem "rspec"
+  gem 'shoulda-matchers'
 end
 
 # Use ActiveModel has_secure_password

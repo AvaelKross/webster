@@ -23,16 +23,4 @@
 
 class Project < ActiveRecord::Base
   has_many :messages
-
-  def send_sms(sms_text)
-    Smsru::Sender.sms_send(self.phone, sms_text, Settings.sms_api_id, self.sms_from)
-    Message.create(project: self, text: sms_text, message_type: "sms")
-  end
-  handle_asynchronously :send_sms
-
-  def send_email(email_text)
-    UserMailer.custom_mail(self.email, self.email_sender_email, "#{self.email_sender} <#{self.email_sender_email}>", self.email_subject, email_text).deliver
-    Message.create(project: self, text: email_text, message_type: "e-mail")
-  end
-  handle_asynchronously :send_email
 end
