@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   authenticated :user do
     match "/delayed_job" => DelayedJobWeb, :anchor => false, via: [:get, :post]
   end
-  root 'admin/dashboard#index'
 
   devise_scope :user do
     get '/registration/:token' => 'users#register_form', as: :register
