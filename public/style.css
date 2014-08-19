@@ -48,6 +48,11 @@ head,body{
 	font-weight: 400;
 }
 
+ul {
+	list-style: none;
+	padding: 0px;
+}
+
 .w960 {
 	width: 960px;
 	margin: 0px auto;
@@ -58,6 +63,11 @@ head,body{
 	height: 38px;
 	padding: 6px 0px;
 	background: #008bb9;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	z-index: 33;
 }
 
 .head-menu ul{
@@ -364,6 +374,7 @@ head,body{
 	font-size: 20px;
 	margin-bottom: 12px;
 	padding-top: 60px;
+	margin-left: -10px;
 	text-align: center;
 }
 
@@ -535,19 +546,30 @@ head,body{
 	color: #000;
 }
 
+.row {
+	float:left;
+	margin-bottom: 50px;
+}
+
 .letter {
-	width: 220px;
+	width: 460px;
 	float: left;
 	margin-right: 20px;
+	font-size: 16px;
 }
 
 .letter .letter-title {
 	float:left;
-	font-weight: 300;
-	font-size: 18px;
-	text-align: center;
-	width: 100%;
+	font-weight: bold;
+	width: 350px;
 	margin-bottom: 10px;
+	margin-top: -3px;
+}
+
+.letter .letter-text {
+	font-style: italic;
+	float: left;
+	width: 350px;
 }
 
 .letter .image {
@@ -555,6 +577,7 @@ head,body{
 	width: 82px;
 	height: 120px;
 	float:left;
+	margin-right: 15px;
 	box-shadow: 0px 1px 5px rgba(0,0,0,0.3);
 }
 
@@ -562,36 +585,102 @@ head,body{
 	height: 900px;
 }
 
+.team small {
+	line-height: 17px;
+	font-size: 12px;
+}
+
+.team .team-image{
+	width:180px;
+	height:180px;
+	border: 5px solid #f0c500;
+	border-radius: 95px;
+	background: url('faces.jpg') no-repeat;
+	float: left;
+}
+
+.team .right .team-image{
+	float: right;
+}
+
+.team .horizontal-row .team-text{
+	padding: 0px 15px;
+	margin-top:15px;
+	font-size: 16px;
+}
+
+.team .horizontal-row .team-text b {
+	margin-bottom:5px;
+	display: block;
+}
+
+.team .horizontal-row .team-text li {
+	margin-bottom: 5px;
+}
+
+.team-horiz-element{
+	width: 400px;
+	margin-top: 25px;
+}
+
+.team .left{ 
+	float: left;
+	padding-left: 64px;
+	width: 410px;
+}
+
+.team .right{ 
+	float: right;
+	padding-right: 64px;
+}
+
+.team .right .team-text{ 
+	text-align: right;
+}
+
+.team-column{
+	margin: 0px 64px;
+	margin-top: 10px;
+	width: 190px;
+	float: left;
+	font-size: 16px;
+	text-align: center;
+}
+
+.team-column .team-image{
+	margin-bottom: 16px;
+}
+
+.team-column li{
+	margin-bottom: 8px;
+}
+
 .questions {
-	height: 120px;
+	height: 145px;
 	padding-top: 50px;
 }
 
 .big-button {
-	font-size: 55px;
-	font-weight: bold;
+	width: 971px;
+	height: 162px;
 	margin: 0px auto;
 	display: block;
-	padding: 20px 40px;
+	background: url('big-button.png') no-repeat;
+	border: 0px;
+	outline: none;
 }
 
-#popup_button2{
-	width: 271px !important;
-	margin: 0px auto !important;
-	margin-top: 12px !important;
-	display:block;
-	background-image: url(button3.png);
+.big-button:hover{
+	background-position: 0px -162px;
+}
+
+.big-button:active{
+	background-position: 0px -324px;
+	outline: none;
 }
 
 .footer{
 	height: 120px;
-}
-
-.right {
-	float: right;
-	font-size: 12px;
-	margin-top: 15px;
-	line-height: 20px;
 }
 
 .title{
