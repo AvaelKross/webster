@@ -9,16 +9,19 @@
 	<script src="jquery-1.10.2.min.js"></script>
 	<!-- <link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
 	<script type="text/javascript" src="jquery.maskedinput.min.js"></script> -->
-	<script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+	<!-- <script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script> -->
 	<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,500italic&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
 	<script src="script.js"></script>
 </head>
 <body>
+	<div class="empty-space" style="height:50px;">
+
+	</div>
 	<div class="head-menu">
 		<div class="w960">
 			<ul>
 				<li>Ролик →</li>
-				<li>О нас в цифрах →</li>
+				<li><a href="#about">О нас в цифрах →</a></li>
 				<li>Пакеты услуг →</li>
 				<li>Наши работы →</li>
 				<li>Гарантии →</li>
@@ -29,7 +32,7 @@
 		</div>
 	</div>
 	
-	<div class="main">
+	<div class="main" id="main">
 		<div class="w960">
 			<div class="head">
 				<div>
@@ -39,7 +42,7 @@
 					</div>
 				</div>
 				<button class="call-me-button">ЗАКАЗАТЬ ЗВОНОК</button>
-				<div class="phone">8 800 000-111-7</div>
+				<div class="phone">8 919 391-91-70</div>
 			</div>
 			<div class="main-text-block">
 				<div id="main_title">
@@ -64,7 +67,7 @@
 		</div>
 	</div>
 	
-	<div class="about">
+	<div class="about" id="about">
 		<div class="w960">
 			<div class="title">О нас в цифрах</div>
 			<div class="line">
@@ -86,7 +89,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="projects">
+	<div class="projects" id="projects">
 		<div class="cross-line"></div>
 		<div class="w960">
 			<div class="title" style="width:350px;">Выберите пакет услуг</div>
@@ -131,7 +134,7 @@
 			<div class="title" style="width:225px;">Наши работы</div>
 		</div>
 	</div> -->
-	<div class="guarantee">
+	<div class="guarantee" id="guarantee">
 		<div class="w960">
 			<div class="title">Мы гарантируем вам</div>
 				<div class='first-gua gua-row'>
@@ -150,7 +153,7 @@
 		</div>
 	</div>
 	
-	<div class="how-works">
+	<div class="how-works" id="how-works">
 		<div class="cross-line"></div>
 		<div class="w960">
 			<div class="title" style="width:280px;">Как мы работаем</div>
@@ -170,37 +173,93 @@
 			</div>
 		</div>
 	</div>
-	<div class="thanks-letters">
+	<div class="thanks-letters" id="thanks">
 		<div class="w960">
 			<div class="title">Отзывы</div>
 			<div class="letters">
-				<div class="letter">
-					<div class="letter-title">ООО "Ижетех"</div>
-					<a class="fancybox" rel="group" href="logo.png"> <div class="image"></div></a>
+				<div class="row">
+					<div class="letter">
+						<!-- <a class="fancybox" rel="group" href="logo.png">  --><div class="image"></div><!-- </a> -->
+						<div class="letter-title">ООО "ПУПС"</div>
+						<div class="letter-text">Клиенты будут выбирать работать с вами, а не с конкурентами, мы досканально изучим потребности ваших клиентов и предоставим им возможность "решить их проблемы" Клиенты будут выбирать работать с вами, а не с конкурентами, мы досканально </div>
+					</div>
+					<div class="letter">
+						<div class="image"></div>
+						<div class="letter-title">ООО "Урал"</div>
+						<div class="letter-text">Клиенты будут выбирать работать с вами, а не с конкурентами, мы досканально изучим потребности ваших клиентов и предоставим им возможность "решить их проблемы" Клиенты будут выбирать работать с вами, а не с конкурентами, мы досканально </div>
+					</div>
 				</div>
-				<div class="letter">
-					<div class="letter-title">ООО "Урал"</div>
-					<div class="image"></div>
-				</div>
-				<div class="letter">
-					<div class="letter-title">ООО "ВПЕК"</div>
-					<div class="image"></div>
-				</div>
-				<div class="letter">
-					<div class="letter-title">ООО "Строй плюс"</div>
-					<div class="image"></div>
+				<div class="row">
+					<div class="letter">
+						<div class="image"></div>
+						<div class="letter-title">ООО "ВПЕК"</div>
+					</div>
+					<div class="letter">
+						<div class="image"></div>
+						<div class="letter-title">ООО "Строй плюс"</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="team">
+	<div class="team" id="team">
 		<div class="w960">
 			<div class="title">Команда экспертов Webster</div>
+			<div class="horizontal-row">
+				<div class="team-horiz-element left">
+					<div class="team-image" style="margin-right: 15px;"></div>
+					<div class='team-text'>
+						<b>Яцура Павел</b>
+						<small>ОСНОВАТЕЛЬ СТУДИИ WEBSTER</small>
+						<ul>
+							<li>2 года опыта в сфере интернет-маркетинга</li>
+							<li>Более 100 реализованных проектов</li>
+						</ul>
+					</div>
+				</div>
+				<div class="team-horiz-element right">
+					<div class="team-image" style="background-position: -190px 0px; margin-left: 15px; margin-bottom: 20px;"></div>
+					<div class='team-text'>
+						<b>Смирнов Алексей</b>
+						<small>ТЕХНИЧЕСКИЙ ДИРЕКТОР СТУДИИ WEBSTER</small>
+						<ul>
+							<li>4 года опыта<br> WEB-разработки</li>
+							<li>38 реализованных online-проектов</li>
+							<li>Богатый опыт работы с иностранными компаниями</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="vertical-row" style="float:left;margin-bottom: 20px;margin-top:25px;">
+				<div class="team-column">
+					<div class="team-image" style="background-position: -380px 0px;"></div>
+					<div class="team-title"><small>МЕНЕДЖЕРЫ ПРОЕКТОВ</small></div>
+					<ul>
+						<li><b>Команда бравых менеджеров</b>, которые сделают всё, чтобы ваш проект соответствовал заявленному заданию и приносил прибыль</li>
+					</ul>
+				</div>
+				<div class="team-column">
+					<div class="team-image" style="background-position: -570px 0px;"></div>
+					<div class="team-title"><small>ОТДЕЛ РАЗРАБОТКИ СТРАНИЦ</small></div>
+					<ul>
+						<li><b>2 профессиональных WEB-дизайнера</b>, которые проектируют работающие интерфейсы для любого бизнеса</li>
+						<li><b>3 программиста</b>, постоянно внедряющие полезные "фишки" для наших клиентов</li>
+					</ul>
+				</div>
+				<div class="team-column">
+					<div class="team-image" style="background-position: -760px 0px;"></div>
+					<div class="team-title"><small>ОТДЕЛ РЕКЛАМЫ И КОПИРАЙТИНГА</small></div>
+					<ul>
+						<li><b>2 копирайтера</b>, которые разработают имидж вашей компании, напишут продающие тексты и сформируют Уникальное торговое предложение для вашей компании</li>
+						<li><b>2 специалиста по контекстной рекламе</b>, которые настроят тугой поток потенциальных клиентов на ваш сайт</li>
+					</ul>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div class="questions">
 		<div class="w960">
-			<button class="big-button">ЗАДАТЬ ВОПРОС МЕНЕДЖЕРУ</button>
+			<button class="big-button"></button>
 		</div>
 	</div>
 	<div class="footer">
@@ -219,12 +278,11 @@
 	</div>
 	<div class="popup" id="popup1">
 		<div class="block">
-			<div class="title">Оставьте свои данные<br>и мы вам перезвоним</div>
+			<div class="popup-title">Введите свои данные<br>и мы свяжемся с Вами</div>
 			<div class="form">
-				<input type="text" id="phone" placeholder="Введите телефон"/>
-				<input type="text" id="name" placeholder="Введите имя"/>
-				<input type="text" id="email" placeholder="Введите E-mail"/>
-				<input type="submit" id="in-popup-button" class="submit_button" value=' ' onclick="yaCounter25622420.reachGoal('popup-click'); return true;"/>
+				<input type="text" id="name" placeholder="Ваше имя"/>
+				<input type="text" id="phone" placeholder="Ваш телефон" style="margin-bottom: 23px;" />
+				<input type="submit" id="in-popup-button" class="submit_button" value='ОТПРАВИТЬ' onclick="yaCounter25622420.reachGoal('popup-click'); return true;"/>
 			</div>
 		</div>
 		<div class="closer">
@@ -240,29 +298,28 @@
 	<!-- Yandex.Metrika counter -->
 	<script type="text/javascript">
 	(function (d, w, c) {
-		(w[c] = w[c] || []).push(function() {
-			try {
-				w.yaCounter25622420 = new Ya.Metrika({id:25622420,
-						webvisor:true,
-						clickmap:true,
-						trackLinks:true,
-						accurateTrackBounce:true});
-			} catch(e) { }
-		});
+	    (w[c] = w[c] || []).push(function() {
+	        try {
+	            w.yaCounter26519703 = new Ya.Metrika({id:26519703,
+	                    webvisor:true,
+	                    clickmap:true,
+	                    accurateTrackBounce:true});
+	        } catch(e) { }
+	    });
 
-		var n = d.getElementsByTagName("script")[0],
-			s = d.createElement("script"),
-			f = function () { n.parentNode.insertBefore(s, n); };
-		s.type = "text/javascript";
-		s.async = true;
-		s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+	    var n = d.getElementsByTagName("script")[0],
+	        s = d.createElement("script"),
+	        f = function () { n.parentNode.insertBefore(s, n); };
+	    s.type = "text/javascript";
+	    s.async = true;
+	    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
 
-		if (w.opera == "[object Opera]") {
-			d.addEventListener("DOMContentLoaded", f, false);
-		} else { f(); }
+	    if (w.opera == "[object Opera]") {
+	        d.addEventListener("DOMContentLoaded", f, false);
+	    } else { f(); }
 	})(document, window, "yandex_metrika_callbacks");
 	</script>
-	<noscript><div><img src="//mc.yandex.ru/watch/25622420" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+	<noscript><div><img src="//mc.yandex.ru/watch/26519703" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 	<!-- /Yandex.Metrika counter -->
 </body>
 </html>
