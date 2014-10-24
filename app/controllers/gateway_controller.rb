@@ -3,7 +3,7 @@ class GatewayController < ApplicationController
 
   def send_message
     p 'hi!'
-    proj = Project.where("site LIKE '%#{request.referer}%'").first
+    proj = Project.where("site LIKE '%#{request.referer.split('?').first}%'").first
     p 'WHAT THE HELL'
     p request.referer
     p params
