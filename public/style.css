@@ -1,41 +1,41 @@
 @font-face {
-    font-family: 'Roboto Slab';
-    src: url('font/RobotoSlab-Regular-webfont.eot');
-    src: url('font/RobotoSlab-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-		 url('font/RobotoSlab-Regular-webfont.svg#roboto_slabregular') format('svg'),
-         url('font/RobotoSlab-Regular-webfont.woff') format('woff'),
-         url('font/RobotoSlab-Regular-webfont.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
+  font-family: 'Roboto Slab';
+  src: url('font/RobotoSlab-Regular-webfont.eot');
+  src: url('font/RobotoSlab-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+	 		 url('font/RobotoSlab-Regular-webfont.svg#roboto_slabregular') format('svg'),
+       url('font/RobotoSlab-Regular-webfont.woff') format('woff'),
+       url('font/RobotoSlab-Regular-webfont.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Roboto Slab';
-    src: url('font/RobotoSlab-Light-webfont.eot');
-    src: url('font/RobotoSlab-Light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('font/RobotoSlab-Light-webfont.woff') format('woff'),
-         url('font/RobotoSlab-Light-webfont.ttf') format('truetype'),
-		 url('font/RobotoSlab-Light-webfont.svg#roboto_slablight') format('svg');
-    font-weight: 300;
-    font-style: normal;
+  font-family: 'Roboto Slab';
+  src: url('font/RobotoSlab-Light-webfont.eot');
+  src: url('font/RobotoSlab-Light-webfont.eot?#iefix') format('embedded-opentype'),
+  		 url('font/RobotoSlab-Light-webfont.svg#roboto_slablight') format('svg'),
+       url('font/RobotoSlab-Light-webfont.woff') format('woff'),
+       url('font/RobotoSlab-Light-webfont.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Roboto Slab';
-    src: url('font/RobotoSlab-Bold-webfont.eot');
-    src: url('font/RobotoSlab-Bold-webfont.eot?#iefix') format('embedded-opentype'),
-		 url('font/RobotoSlab-Bold-webfont.svg#roboto_slabbold') format('svg'),
-         url('font/RobotoSlab-Bold-webfont.woff') format('woff'),
-         url('font/RobotoSlab-Bold-webfont.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
+  font-family: 'Roboto Slab';
+  src: url('font/RobotoSlab-Bold-webfont.eot');
+  src: url('font/RobotoSlab-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+	 		 url('font/RobotoSlab-Bold-webfont.svg#roboto_slabbold') format('svg'),
+       url('font/RobotoSlab-Bold-webfont.woff') format('woff'),
+       url('font/RobotoSlab-Bold-webfont.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Bankir-Retro';
-    src: url('font/bankir-retro.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Bankir-Retro';
+  src: url('font/bankir-retro.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 
@@ -54,7 +54,7 @@ ul {
 }
 
 .w960 {
-	width: 960px;
+	width: 1028px;
 	margin: 0px auto;
 	position: relative;
 }
@@ -81,7 +81,7 @@ ul {
 	color: #fff;
 	font-size: 16px;
 	margin-right: 0px;
-	padding: 8px 6px 8px 8px;
+	padding: 8px 50px 8px 44px;
 	border: 1px solid #008bb9;
 	cursor: pointer;
 }
@@ -102,7 +102,7 @@ ul {
 	width: 81px;
 	height: 86px;
 	float: left;
-	background: url('logo.png') no-repeat;
+	background: url('images/logo.png') no-repeat;
 }
 
 .logo-text {
@@ -120,18 +120,18 @@ ul {
 }
 
 .phone{
-	margin-top: 40px;
+	margin-top: 34px;
 	float: right;
 	font-size: 24;
 	font-weight: 700;
 }
 
 .call-me-button{
-	margin-top:34px;
+	margin-top:27px;
 	float:right;
 	font-size:18px;
-	margin-right:9px;
-	background: url('call-me-button.png') no-repeat;
+	margin-right:18px;
+	background: url('images/call-me-button.png') no-repeat;
 	height: 43px;
 	width: 254px;
 	border: 0px;
@@ -151,8 +151,8 @@ ul {
 }
 
 .main{
-	height:631px;
-	background: url('main.jpg') no-repeat;
+	height:655px;
+	background: url('images/main.jpg') no-repeat;
 	background-position: center;
 }
 
@@ -169,18 +169,89 @@ ul {
 	line-height: 30px;
 	height: 110px;
 }
+
 .main .pros{
 	color: #4c4c4c;
 	list-style: none;
 	padding: 0px;
 }
+
 .main .pros .pro{
 	padding-left: 25px;
-	background: url('list-line.png') no-repeat;
+	background: url('images/list-line.png') no-repeat;
 	background-position: 0px 14px;
 	padding-top: 5px;
 	margin-top: 4px;
 	font-size: 17px;
+}
+
+.leadform {
+	background: #1e1e1f;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	width: 331px;
+	height: 343px;
+	float: right;
+	margin-top: -330px;
+	margin-right: 40px;
+	padding: 6px;
+	color: #fff;
+}
+
+.leadform .tittle {
+	width: 330px;
+	text-align: center;
+	margin-top:7px;
+	line-height: 25px;
+	font-weight: 300;
+	font-size: 18px;
+	margin-bottom: 30px;
+}
+
+.leadform input {
+	width: 320px;
+	margin: 0px auto;
+	margin-bottom: 15px;
+	display:block;
+	height: 38px;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border: 0px;
+	padding-left:10px;
+}
+
+.leadform_submit_button {
+	margin: 0px auto !important;
+	margin-top: 45px !important;
+	width: 320px !important;
+	display:block;
+	background-image: url('images/leadform-button.png');
+	height: 56px !important;
+	cursor: pointer;
+	border:0px;
+	color: #000;
+	font-weight: 500;
+	font-size: 18px;
+	background-color: #1e1e1f;
+	padding-top: 6px;
+	border-radius: 0px !important;
+	-webkit-border-radius: 0px !important;
+	-moz-border-radius: 0px !important;
+}
+
+.leadform_submit_button:focus {
+	outline: none;
+}
+
+.leadform_submit_button:hover{
+	background-position: 0px 112px;
+}
+.leadform_submit_button:active{
+	background-position: 0px 56px;
+	outline: none;
+	padding-top: 7px;
 }
 
 .lead1{
@@ -194,7 +265,7 @@ ul {
 	float: left;
 	width: 360px;
 	height: 67px;
-	background: url('lead1-button.png') no-repeat;
+	background: url('images/lead1-button.png') no-repeat;
 	outline: none;
 	border: 0px;
 	cursor: pointer;
@@ -215,7 +286,7 @@ ul {
 	float: left;
 	width: 360px;
 	height: 66px;
-	background: url('lead1-button2.png') no-repeat;
+	background: url('images/lead1-button2.png') no-repeat;
 	outline: none;
 	border: 0px;
 	cursor: pointer;
@@ -255,28 +326,28 @@ ul {
 ::-webkit-input-placeholder { /* WebKit browsers */
 	font-family: 'Ubuntu', sans-serif;
 	font-weight: 300;
-    color: #8a8a8a;
+    color: #e4e4e4;
 	font-size: 18px;
 	line-height: 14px;
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
     font-family: 'Ubuntu', sans-serif;
 	font-weight: 300;
-    color: #8a8a8a;
+    color: #e4e4e4;
 	font-size: 18px;
 	line-height: 14px;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
     font-family: 'Ubuntu', sans-serif;
 	font-weight: 300;
-    color: #8a8a8a;
+    color: #e4e4e4;
 	font-size: 18px;
 	line-height: 14px;
 }
 :-ms-input-placeholder { /* Internet Explorer 10+ */
     font-family: 'Ubuntu', sans-serif;
 	font-weight: 300;
-    color: #8a8a8a;
+    color: #e4e4e4;
 	font-size: 18px;
 	line-height: 14px;
 }
@@ -286,7 +357,7 @@ ul {
 }
 
 .doing-block{
-	width: 310px;
+	width: 332px;
 	margin-left: 10px;
 	float: left;
 	position: relative;
@@ -295,7 +366,7 @@ ul {
 }
 
 .doing-block .icons{
-	background: url('icons.png') no-repeat;
+	background: url('images/icons.png') no-repeat;
 	width: 91px;
 	height: 89px;
 	float: left;
@@ -338,7 +409,7 @@ ul {
 	font-size: 14px;
 	line-height: 24px;
 	background-color: #fcfcfc;
-	background: url('projects.png') no-repeat;
+	background: url('images/projects.png') no-repeat;
 	background-position: top;
 	padding-bottom: 25px;
 }
@@ -355,7 +426,7 @@ ul {
 }
 
 .cross-line{
-	background: url('cross-line.png') repeat-x;
+	background: url('images/cross-line.png') repeat-x;
 	margin-top: 45px;
 	height:3px;
 	width:100%;
@@ -369,7 +440,7 @@ ul {
 }
 
 .project-todo-list li{
-	background: url('list-line.png') no-repeat;
+	background: url('images/list-line.png') no-repeat;
 	background-position: 0px 12px;
 	background-size: 16px 2px;
 	-webkit-background-size: 16px 2px;
@@ -390,7 +461,7 @@ ul {
 .long-button{
 	font-size:16px;
 	font-weight: 700;
-	background: url('long-button.png') no-repeat;
+	background: url('images/long-button.png') no-repeat;
 	height: 35px;
 	width: 484px;
 	margin: 0px auto;
@@ -413,7 +484,17 @@ ul {
 }
 
 .guarantee {
-	height: 380px;
+	height: 470px;
+	background: url('images/letters-bg.png');
+}
+
+.guarantee .title {
+	background: none;
+	color: #000;
+}
+
+.guarantee .leadform {
+	margin-top: -290px;
 }
 
 .gua-row {
@@ -430,28 +511,47 @@ ul {
 }
 
 .first-gua div{
-	background: url('blue-line.png') no-repeat;
+	background: url('images/blue-line.png') no-repeat;
 	background-position: 17px 9px;
 }
 
 .second-gua div{
-	background: url('yellow-line.png') no-repeat;
+	background: url('images/yellow-line.png') no-repeat;
 	background-position: 17px 9px;
 }
 
 .third-gua div{
-	background: url('green-line.png') no-repeat;
+	background: url('images/green-line.png') no-repeat;
 	background-position: 17px 9px;
 }
 
+.guar {
+	background: url('images/marker-guar.png') no-repeat;
+	background-position: 18px 0px;
+	padding-left: 54px;
+	padding-top: 2px;
+	font-size: 19px;
+	font-weight: 500;
+	width: 580px;
+	margin-bottom: 20px;
+	float: left;
+}
+
+.guar .subguar {
+	font-size: 16px;
+	font-weight: 400;
+	font-height: 18px;
+}
+
 .how-works{
-	height: 490px;
+	height: 636px;
 }
 
 .how-works-bg {
-	background: url('how-works.png') no-repeat;
+	background: url('images/how-works-2.png') no-repeat;
+	background-position: 40px 0px;
 	margin-top: 35px;
-	height:300px;
+	height:484px;
 	width:100%;
 	position: absolute;
 }
@@ -479,7 +579,7 @@ ul {
 	width: 150px;
 	margin-left: 12px;
 	margin-right: 35px;
-	font-size: 14px;
+	font-size: 18px;
 	font-weight: 400;
 	vertical-align:middle;
     display: table-cell;
@@ -489,23 +589,22 @@ ul {
 }
 
 .how-works .line {
-	margin-left: -22px;
+	margin-left: 5px;
 	height: 120px;
-	margin-top: 90px;
+	margin-top: 130px;
 	text-align: center;
 	display: table;
-	width: 987px;
+	width: 990px;
 }
 
 .how-works .little-line {	
-    width: 789px !important;
-    padding-right: 16px !important;
+    width: 660px !important;
+    padding-right: 25px !important;
 }
 
 .little-line {
-	width: 780px;
 	margin: 0px auto !important;
-	margin-top: 5px !important;
+	margin-top: 80px !important;
 }
 
 .little-line .doing-block {
@@ -513,7 +612,7 @@ ul {
 }
 
 .thanks-letters{
-	background: url('letters-bg.png');
+	background: url('images/letters-bg.png');
 	height:475px;
 }
 
@@ -549,7 +648,7 @@ ul {
 }
 
 .letter .image {
-	background: url('letter.png') no-repeat;
+	background: url('images/letter.png') no-repeat;
 	width: 82px;
 	height: 120px;
 	float:left;
@@ -571,7 +670,7 @@ ul {
 	height:180px;
 	border: 5px solid #f0c500;
 	border-radius: 95px;
-	background: url('faces.jpg') no-repeat;
+	background: url('images/faces.jpg') no-repeat;
 	float: left;
 }
 
@@ -641,7 +740,7 @@ ul {
 	height: 162px;
 	margin: 0px auto;
 	display: block;
-	background: url('big-button.png') no-repeat;
+	background: url('images/big-button.png') no-repeat;
 	border: 0px;
 	outline: none;
 }
@@ -716,7 +815,7 @@ ul {
 	height:370px;
 	display: inline-block;
     position: relative;
-    background: url('popup-bg.png') no-repeat;
+    background: url('images/popup-bg.png') no-repeat;
     vertical-align: middle;
 }
 
@@ -733,7 +832,7 @@ ul {
 	margin-top: 12px;
 	width: 300px !important;
 	display:block;
-	background-image: url(popup-button.png);
+	background-image: url('images/popup-button.png');
 	height: 42px !important;
 	cursor: pointer;
 	border:0px;

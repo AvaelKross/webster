@@ -6,12 +6,12 @@
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
 	<link href="style.css" type="text/css" rel="stylesheet" />
-	<script src="jquery-1.10.2.min.js"></script>
+	<script src="js/jquery-1.10.2.min.js"></script>
 	<!-- <link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
 	<script type="text/javascript" src="jquery.maskedinput.min.js"></script> -->
 	<!-- <script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script> -->
 	<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,500italic&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
-	<script src="script.js"></script>
+	<script src="js/script.js"></script>
 </head>
 <body>
 	<div class="empty-space" style="height:50px;">
@@ -20,14 +20,11 @@
 	<div class="head-menu">
 		<div class="w960">
 			<ul>
-				<li>Ролик →</li>
-				<li><a href="#about">О нас в цифрах →</a></li>
-				<li>Пакеты услуг →</li>
-				<li>Наши работы →</li>
-				<li>Гарантии →</li>
-				<li>Как мы работаем →</li>
-				<li>Отзывы →</li>
-				<li>Команда</li>
+				<li>Главная страница</li>
+				<li>Бесплатный тест</li>
+				<li>Портфолио</li>
+				<li>Гарантии</li>
+				<li>Обратная связь</li>
 			</ul>
 		</div>
 	</div>
@@ -57,15 +54,23 @@
 					<li class="pro">Обучение азам<br>интернет-маркетинка</li>
 				</ul>
 			</div>
+			<div class="leadform">
+				<div class="tittle">ОСТАВЬТЕ ЗАЯВКУ НА<br>БЕСПЛАТНЫЙ ТЕСТОВЫЙ ПЕРИОД</div>
+				<input type="text" id="name" placeholder="ИМЯ"/>
+				<input type="text" id="surname" placeholder="ФАМИЛИЯ"/>
+				<input type="text" id="phonemail" placeholder="ТЕЛЕФОН/E-MAIL" style="margin-bottom: 23px;" />
+				<input type="submit" class="leadform_submit_button" value='ОТПРАВИТЬ' onclick="yaCounter25622420.reachGoal('popup-click'); return true;"/>
+			</div>
 		</div>
 	</div>
 	
-	<div class="lead1">
+	<!-- <div class="lead1">
 		<div class="w960">
 			<button class="button1"></button>
 			<button class="button2"></button>
 		</div>
 	</div>
+	-->
 	
 	<div class="about" id="about">
 		<div class="w960">
@@ -73,22 +78,24 @@
 			<div class="line">
 				<div class="doing-block">
 					<div class="icons"></div>
-					<div class="counter-title">30 проектов</div>
-					Мы запустили за полгода
+					<div class="counter-title">147</div>
+					Доступных рекламных<br> каналов
 				</div>
 				<div class="doing-block">
 					<div class="icons" style="background-position: -91px 0px"></div>
-					<div class="counter-title">от 85 000 руб.</div>
-					Чистой прибыли в месяц<br>приносит 1 проект
+					<div class="counter-title">20 000</div>
+					Человек увидят ваше <br>предложение
 				</div>
 				<div class="doing-block">
 					<div class="icons" style="background-position: -182px 0px"></div>
-					<div class="counter-title">74 заявки</div>
-					Абсолютный рекорд<br>за 1 день
+					<div class="counter-title">13%</div>
+					Рост продаж за 1-й<br>месяц
 				</div>
 			</div>
 		</div>
 	</div>
+
+	<!--
 	<div class="projects" id="projects">
 		<div class="cross-line"></div>
 		<div class="w960">
@@ -128,27 +135,58 @@
 			<button class="long-button">Я ЗАКАЗЫВАЮ ПРОЕКТ УЖЕ НЕ В ПЕРВЫЙ РАЗ</button>
 		</div>
 	</div>
-	<!-- <div class="works">
+
+	-->
+
+	<div class="works">
 		<div class="cross-line"></div>
 		<div class="w960">
 			<div class="title" style="width:225px;">Наши работы</div>
 		</div>
-	</div> -->
+	</div>
 	<div class="guarantee" id="guarantee">
 		<div class="w960">
 			<div class="title">Мы гарантируем вам</div>
-				<div class='first-gua gua-row'>
-					<div class='left-gua'>Ваше предложение будет самым<br>привлекательным среди конкурентов</div>
-					<div class='right-gua'>Клиенты будут выбирать работать с вами, а не с <br>конкурентами, мы досканально изучим<br>потребности ваших клиентов и предоставим им<br>возможность "решить их проблемы"</div>
-				</div>
-				<div class='second-gua gua-row'>
-					<div class='left-gua'>Страница будет создана и структурирована<br>исходя из особенностей вашего предложения</div>
-					<div class='right-gua'>Информация будет подана без воды, только<br>факты, только конкретика и предложение, от<br>которого глупо будет отказаться</div>
-				</div>
-				<div class='third-gua gua-row'>
-					<div class='left-gua'>К ней будут подключены каналы траффика,<br>из которых приходят самые "вкусные"<br>клиенты</div>
-					<div class='right-gua'>Мы обеспечиваем поток только потенциальных<br>клиентов на ваш сайт,исходя из портрета вашей<br>целевой аудитории, вы не будете тратить деньги<br>на случайных посетителей</div>
-				</div>
+			<!--
+			<div class='first-gua gua-row'>
+				<div class='left-gua'>Ваше предложение будет самым<br>привлекательным среди конкурентов</div>
+				<div class='right-gua'>Клиенты будут выбирать работать с вами, а не с <br>конкурентами, мы досканально изучим<br>потребности ваших клиентов и предоставим им<br>возможность "решить их проблемы"</div>
+			</div>
+			<div class='second-gua gua-row'>
+				<div class='left-gua'>Страница будет создана и структурирована<br>исходя из особенностей вашего предложения</div>
+				<div class='right-gua'>Информация будет подана без воды, только<br>факты, только конкретика и предложение, от<br>которого глупо будет отказаться</div>
+			</div>
+			<div class='third-gua gua-row'>
+				<div class='left-gua'>К ней будут подключены каналы траффика,<br>из которых приходят самые "вкусные"<br>клиенты</div>
+				<div class='right-gua'>Мы обеспечиваем поток только потенциальных<br>клиентов на ваш сайт,исходя из портрета вашей<br>целевой аудитории, вы не будете тратить деньги<br>на случайных посетителей</div>
+			</div>
+			-->
+			<div class="guar">
+				Вы платите за понятный результат
+				<div class="subguar">Количество целевых обращений в Вашу компанию.</div>
+			</div>
+			<div class="guar">
+				Вы не несёте финансовые риски
+				<div class="subguar">Все затраты связанные с привлечением целевых клиентов мы возьмём на себя.</div>
+			</div>
+			<div class="guar">
+				Только целевые звонки
+				<div class="subguar">Оплата только за качественные заявки. Вы сами решаете, каким параметрам будет соответствовать входящий клиент.</div>
+			</div>
+			<div class="guar">
+				Работаем по «прозрачному» договору
+				<div class="subguar">В котором чётко прописаны все условия и гарантии</div>
+			</div>
+			<div class="guar">
+				Подтверждение качества клиентов
+				<div class="subguar">Все входящие разговоры записываются</div>
+			</div>			
+			<div class="leadform">
+				<div class="tittle">ОСТАВЬТЕ ЗАЯВКУ НА<br>БЕСПЛАТНЫЙ ТЕСТОВЫЙ ПЕРИОД</div>
+				<input type="text" id="name" placeholder="ИМЯ"/>
+				<input type="text" id="surname" placeholder="ФАМИЛИЯ"/>
+				<input type="text" id="phonemail" placeholder="ТЕЛЕФОН/E-MAIL" style="margin-bottom: 23px;" />
+				<input type="submit" class="leadform_submit_button" value='ОТПРАВИТЬ' onclick="yaCounter25622420.reachGoal('popup-click'); return true;"/>
 			</div>
 		</div>
 	</div>
@@ -156,30 +194,31 @@
 	<div class="how-works" id="how-works">
 		<div class="cross-line"></div>
 		<div class="w960">
-			<div class="title" style="width:280px;">Как мы работаем</div>
+			<div class="title" style="width:620px;">Как получить клиентов уже через 2 недели?</div>
 			<div class="how-works-bg"></div>
 			<div class="line">
-				<div class="doing-block" style="">Оставьте заявку на<br>сайте или позвоните<br>нам</div>
-				<div class="doing-block">Заключим<br> двусторонний<br> договор на оказание<br> услуг</div>
-				<div class="doing-block">Мы проведем анализ<br>ниши, исходя из<br>вашего опыта и<br>аналитики наших<br>специалистов</div>
-				<div class="doing-block">Создадим и запустим<br> рекламные кампании<br> в различных<br> источниках</div>
-				<div class="doing-block" style="margin-right: 0px;">Обеспечим вам канал<br>допродаж и <br>повторных продаж<br>вашим клиентам.</div>
+				<div class="doing-block">
+					Мы проведём анализ<br>Вашего бизнеса и<br>решим, где лучше<br>искать клиентов.
+				</div>
+				<div class="doing-block">Запустим каналы<br>привлечения клиентов</div>
+				<div class="doing-block" style="margin-right: 0px;">
+					Мы проанализируем<br>результат, и приступим<br>к процессу улучшения
+				</div>
 			</div>
 			<div class="line little-line">
-				<div class="doing-block">Мы подберем для вас<br>лучший вариант,<br>исходя из желаемого<br>объема продаж и<br>вашего бюджета</div>
-				<div class="doing-block">Вы внесёте<br> предоплату</div>
-				<div class="doing-block">Создадим продающую<br>страницу с <br>инвидидуальным<br> дизайном и<br>оптимальной для<br>вашего бизнеса</div>
-				<div class="doing-block" style="margin-right: 0px;">Проведем анализ<br>поведения<br>потенциальных<br>клиентов на<br>основании собранных<br>данных</div>
+				<div class="doing-block">Заключим<br>двухсторонний договор</div>
+				<div class="doing-block">Вы получите первые<br>продажи</div>
 			</div>
 		</div>
 	</div>
+	<!--
 	<div class="thanks-letters" id="thanks">
 		<div class="w960">
 			<div class="title">Отзывы</div>
 			<div class="letters">
 				<div class="row">
 					<div class="letter">
-						<!-- <a class="fancybox" rel="group" href="logo.png">  --><div class="image"></div><!-- </a> -->
+						<!-- <a class="fancybox" rel="group" href="logo.png"> <div class="image"></div><!-- </a>
 						<div class="letter-title">ООО "ПУПС"</div>
 						<div class="letter-text">Клиенты будут выбирать работать с вами, а не с конкурентами, мы досканально изучим потребности ваших клиентов и предоставим им возможность "решить их проблемы" Клиенты будут выбирать работать с вами, а не с конкурентами, мы досканально </div>
 					</div>
@@ -202,6 +241,7 @@
 			</div>
 		</div>
 	</div>
+	-->
 	<div class="team" id="team">
 		<div class="w960">
 			<div class="title">Команда экспертов Webster</div>
