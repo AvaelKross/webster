@@ -869,3 +869,115 @@ ul {
 #popup2 .title {
 	margin-top: 90px;
 }
+
+
+
+
+/* SLIDER */
+
+.works {
+	height: 474px;
+}
+
+#slider-wrap{ /* Оболочка слайдера и кнопок */
+  width:1028px;
+}
+#slider{ /* Оболочка слайдера */
+  width:1008px;
+  height:370px;
+  overflow: hidden;
+  position:relative;
+}
+.slide { /* Слайд */
+  width:100%;
+  height:100%;
+  padding-left: 80px;
+}
+.slide-title {
+	font-size:18px;
+	font-weight:700;
+	margin-bottom:28px;
+	margin-top: 10px;
+}
+
+.slide-stat-title {
+	font-size: 18px;
+}
+.slide-stat {
+	margin-top:8px;
+	font-size: 16px;
+	padding-left:30px;
+	background: url('images/stat-icons.png') no-repeat;
+	height:22px;
+	padding-top:2px;
+}
+
+.slide-stat.clients {
+	background-position: 0px -23px;
+}
+
+.slide-stat.money {
+	background-position: 0px 0px;
+}
+
+.slide-letter {
+	width: 607px;
+	margin-top: 10px;
+	font-size: 16px;
+	line-height:20px;
+}
+.slide-letter-author {
+	margin-top: 30px;
+}
+
+.slide-case {
+	position:absolute;
+	top:5px;
+	right: 170px;
+}
+/*
+.sli-links { 
+  margin-top:10px;
+  text-align:center;
+}
+.sli-links .control-slide{
+  margin:2px;
+  display:inline-block;
+  width:16px;
+  height:16px;
+  overflow:hidden;
+  background:url('images/radioBg.png') center bottom no-repeat;
+}
+.sli-links .control-slide:hover{
+  cursor:pointer;
+  background-position:center center;
+}
+.sli-links .control-slide.active{
+  background-position:center top;
+}
+*/
+#prewbutton, #nextbutton{ /* Ссылка "Следующий" и "Педыдущий" */
+  display:block;
+  width:56px;
+  height:47px;
+  position:absolute;
+  top: 145px;
+  overflow:hidden;
+  text-indent:-999px;
+  background:url('images/arrowBg.png') left bottom no-repeat;
+  opacity:1;
+  z-index:3;
+  outline:none !important;
+}	
+#prewbutton:hover {
+	background:url('images/arrowBg.png') right bottom no-repeat;}
+}
+#prewbutton{left:10px;}
+#nextbutton{
+  right:10px;
+  background:url('images/arrowBg.png') left top no-repeat;
+}
+#nextbutton:hover {
+	background:url('images/arrowBg.png') right top no-repeat;}
+}
+/* //SLIDER */
