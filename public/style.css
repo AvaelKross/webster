@@ -662,7 +662,8 @@ ul {
 
 .team small {
 	line-height: 17px;
-	font-size: 12px;
+	font-size: 14px;
+	font-weight: 500;
 }
 
 .team .team-image{
@@ -690,23 +691,21 @@ ul {
 }
 
 .team .horizontal-row .team-text li {
-	margin-bottom: 5px;
+	margin-bottom: 12px;
 }
 
 .team-horiz-element{
-	width: 400px;
+	width: 520px;
 	margin-top: 25px;
 }
 
 .team .left{ 
 	float: left;
-	padding-left: 64px;
-	width: 410px;
+	width: 500px;
 }
 
 .team .right{ 
 	float: right;
-	padding-right: 64px;
 }
 
 .team .right .team-text{ 
@@ -714,9 +713,9 @@ ul {
 }
 
 .team-column{
-	margin: 0px 64px;
+	margin: 0px 99px;
 	margin-top: 10px;
-	width: 190px;
+	width: 210px;
 	float: left;
 	font-size: 16px;
 	text-align: center;
@@ -724,6 +723,7 @@ ul {
 
 .team-column .team-image{
 	margin-bottom: 16px;
+	margin-left: 10px;
 }
 
 .team-column li{
@@ -756,6 +756,8 @@ ul {
 
 .footer{
 	height: 120px;
+	background: url('images/wtf-footer-bg.png') no-repeat;
+	background-position: 680px 42px;
 }
 
 .title{
