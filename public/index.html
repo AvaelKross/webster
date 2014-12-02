@@ -7,6 +7,7 @@
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
 	<link href="style.css" type="text/css" rel="stylesheet" />
 	<script src="js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.scrollorama.js"></script>
 	<!-- <link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
 	<script type="text/javascript" src="jquery.maskedinput.min.js"></script> -->
 	<!-- <script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script> -->
@@ -20,15 +21,16 @@
 	<div class="head-menu">
 		<div class="w960">
 			<ul>
-				<li>Главная страница</li>
-				<li>Бесплатный тест</li>
-				<li>Портфолио</li>
-				<li>Гарантии</li>
-				<li>Обратная связь</li>
+				<li><a href="#main-anchor">Главная страница</a></li>
+				<li><a href="#works-anchor">Портфолио</a></li>
+				<li><a href="#guarantee-anchor">Гарантии</a></li>
+				<li><a href="#team-anchor">Наша команда</a></li>
+				<li><a href="#questions-anchor">Обратная связь</a></li>
 			</ul>
 		</div>
 	</div>
 	
+	<div class="scrollblock" id="main-anchor" style="position:relative; margin-top:-50px; height:50px"></div>
 	<div class="main" id="main">
 		<div class="w960">
 			<div class="head">
@@ -43,22 +45,21 @@
 			</div>
 			<div class="main-text-block">
 				<div id="main_title">
-					Приведение клиентов из интернета<br> для малого и среднего бизнеса<br> с гарантией результата
+					Приведение клиентов из интернета<br> для малого и среднего бизнеса<br> с оплатой за результат
 					<!-- Изготовим детали любого класса точности, выполним<br> обработку всех видов металла для промышленных и<br> производственных предприятий. За срок от 1 рабочего дня -->
 				</div>
 				<ul class="pros">
 					<li class="pro">От 5 до 45 входящих звонков в день</li>
-					<li class="pro">Окупаемость проекта от 2-х месяцев</li>
 					<li class="pro">Только целевые клиенты</li>
-					<li class="pro">Предоставление полной статистики<br>и инструментов контроля</li>
-					<li class="pro">Обучение азам<br>интернет-маркетинка</li>
+					<li class="pro">Предоставление записи всех разговоров</li>
+					<li class="pro">Стоимость 1 клиента от 450 рублей</li>
 				</ul>
 			</div>
 			<div class="leadform">
 				<div class="tittle">ОСТАВЬТЕ ЗАЯВКУ НА<br>БЕСПЛАТНЫЙ ТЕСТОВЫЙ ПЕРИОД</div>
-				<input type="text" id="name" placeholder="ИМЯ"/>
-				<input type="text" id="surname" placeholder="ФАМИЛИЯ"/>
-				<input type="text" id="phonemail" placeholder="ТЕЛЕФОН/E-MAIL" style="margin-bottom: 23px;" />
+				<input type="text" id="name" placeholder="Введите имя"/>
+				<input type="text" id="phone" placeholder="Введите телефон"/>
+				<input type="text" id="email" placeholder="Введите e-mail" style="margin-bottom: 23px;" />
 				<input type="submit" class="leadform_submit_button" value='ОТПРАВИТЬ' onclick="yaCounter25622420.reachGoal('popup-click'); return true;"/>
 			</div>
 		</div>
@@ -72,11 +73,12 @@
 	</div>
 	-->
 	
+	<div class="scrollblock" id="about-anchor" style="position:relative; margin-top:-40px; height:40px"></div>
 	<div class="about" id="about">
 		<div class="w960">
 			<div class="title">О нас в цифрах</div>
 			<div class="line">
-				<div class="doing-block">
+				<div class="doing-block" style="margin-left:50px;">
 					<div class="icons"></div>
 					<div class="counter-title">147</div>
 					Доступных рекламных<br> каналов
@@ -138,7 +140,8 @@
 
 	-->
 
-	<div class="works">
+	<div class="scrollblock" id="works-anchor" style="position:relative; margin-top:-40px; height:40px"></div>
+	<div class="works" id="works">
 		<div class="cross-line"></div>
 		<div class="w960">
 			<div class="title" style="width:225px;">Наши работы</div>
@@ -195,10 +198,10 @@
 	</div>
 
 
-
+	<div class="scrollblock" id="guarantee-anchor" style="position:relative; margin-top:-40px; height:40px"></div>
 	<div class="guarantee" id="guarantee">
 		<div class="w960">
-			<div class="title">Мы гарантируем вам</div>
+			<div class="title">Наши гарантии</div>
 			<!--
 			<div class='first-gua gua-row'>
 				<div class='left-gua'>Ваше предложение будет самым<br>привлекательным среди конкурентов</div>
@@ -235,14 +238,15 @@
 			</div>			
 			<div class="leadform">
 				<div class="tittle">ОСТАВЬТЕ ЗАЯВКУ НА<br>БЕСПЛАТНЫЙ ТЕСТОВЫЙ ПЕРИОД</div>
-				<input type="text" id="name" placeholder="ИМЯ"/>
-				<input type="text" id="surname" placeholder="ФАМИЛИЯ"/>
-				<input type="text" id="phonemail" placeholder="ТЕЛЕФОН/E-MAIL" style="margin-bottom: 23px;" />
+				<input type="text" id="name" placeholder="Введите имя"/>
+				<input type="text" id="phone" placeholder="Введите телефон"/>
+				<input type="text" id="email" placeholder="Введите e-mail" style="margin-bottom: 23px;" />
 				<input type="submit" class="leadform_submit_button" value='ОТПРАВИТЬ' onclick="yaCounter25622420.reachGoal('popup-click'); return true;"/>
 			</div>
 		</div>
 	</div>
 	
+	<div class="scrollblock" id="how-works-anchor" style="position:relative; margin-top:-40px; height:40px"></div>
 	<div class="how-works" id="how-works">
 		<div class="cross-line"></div>
 		<div class="w960">
@@ -294,6 +298,8 @@
 		</div>
 	</div>
 	-->
+
+	<div class="scrollblock" id="team-anchor" style="position:relative; margin-top:-40px; height:40px"></div>
 	<div class="team" id="team">
 		<div class="w960">
 			<div class="title">Команда экспертов Webster</div>
@@ -349,7 +355,9 @@
 			</div>
 		</div>
 	</div>
-	<div class="questions">
+
+	<div class="scrollblock" id="questions-anchor" style="position:relative; margin-top:-40px; height:40px"></div>
+	<div class="questions" id="questions">
 		<div class="w960">
 			<button class="big-button"></button>
 		</div>
@@ -372,8 +380,9 @@
 		<div class="block">
 			<div class="popup-title">Введите свои данные<br>и мы свяжемся с Вами</div>
 			<div class="form">
-				<input type="text" id="name" placeholder="Ваше имя"/>
-				<input type="text" id="phone" placeholder="Ваш телефон" style="margin-bottom: 23px;" />
+				<input type="text" id="name" placeholder="Введите имя"/>
+				<input type="text" id="phone" placeholder="Введите телефон" style="margin-bottom: 23px;" />
+				<input type="text" id="email" placeholder="Введите e-mail" style="margin-bottom: 23px;" />
 				<input type="submit" id="in-popup-button" class="submit_button" value='ОТПРАВИТЬ' onclick="yaCounter25622420.reachGoal('popup-click'); return true;"/>
 			</div>
 		</div>

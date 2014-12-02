@@ -2,6 +2,7 @@ function validateEmail(email) {
 	var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 	return re.test(email);
 }
+
 var params = [];
 var query = location.search.substr(1); 
 var A = query.split("&");
@@ -13,14 +14,28 @@ if (key==undefined) {key="Прямой заход";}
 var group = params['group']
 var mail = params['mail']
 
+//Slider params
+
 var hwSlideSpeed = 700;
 var hwTimeOut = 3000;
 var hwNeedLinks = true;
 
 $(document).ready(function() {
+
+	var scrollorama = $.scrollorama({
+    blocks:'.scrollblock',
+    enablePin:false
+  });
+
+  scrollorama.onBlockChange(function() {
+  	var i = scrollorama.blockIndex;
+  	var hash = "#"+scrollorama.settings.blocks.eq(i).attr('id')
+  	if(history.pushState) {
+    	history.pushState(null, null, hash);
+		}
+	});
+
 	if (mail) {
-		//$(".no-mail").hide();
-		//$(".with-mail").show();
 		$(".with-mail .phone").html("8-900-20-14-333");
 		$(".phone_bottom").html("<b>8-900-20-14-333</b>");
 	}
@@ -30,6 +45,10 @@ $(document).ready(function() {
 	});
 	
 	$(".call-me-button").on('click', function(){
+		$("#popup1").css("display", "block"); 
+	});
+
+	$(".big-button").on('click', function(){
 		$("#popup1").css("display", "block"); 
 	});
 	
@@ -62,6 +81,8 @@ $(document).ready(function() {
 	$("#submit_button2").on('click', function(){send_data('#name2', '#email2', '#phone2', "лидформа2")});
 	$("#submit_button1").on('click', function(){send_data('#name1', '#email1', '#phone1', "лидформа1")});
 	$("#in-popup-button").on('click', function(){send_data('#name', '#email', '#phone', "попап")});
+
+  // SLIDER
 
 	$('.slide').css({"position": "absolute", "top":'0', "left": '0'}).hide().eq(0).show();
   var slideNum = 0;

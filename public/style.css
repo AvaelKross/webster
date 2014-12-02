@@ -86,6 +86,11 @@ ul {
 	cursor: pointer;
 }
 
+.head-menu a{
+	text-decoration: none;
+	color: #fff;
+}
+
 
 .head-menu li:hover{
 	background: #33a2c7;
@@ -157,6 +162,7 @@ ul {
 }
 
 .main-text-block, .logo-block{
+	float: left;
 	margin-left: 10px;
 }
 
@@ -193,7 +199,7 @@ ul {
 	width: 331px;
 	height: 343px;
 	float: right;
-	margin-top: -330px;
+	margin-top: 20px;
 	margin-right: 40px;
 	padding: 6px;
 	color: #fff;
@@ -357,7 +363,7 @@ ul {
 }
 
 .doing-block{
-	width: 332px;
+	width: 312px;
 	margin-left: 10px;
 	float: left;
 	position: relative;
@@ -861,10 +867,10 @@ ul {
 
 .popup .popup-title {
 	font-size: 30px;
-	margin-bottom: 54px;
+	margin-bottom: 24px;
 	font-weight: 500;
 	color: #fff;
-	margin-top: 50px;
+	margin-top: 30px;
 	line-height: 32px;
 }
 
@@ -936,6 +942,7 @@ ul {
 	position:absolute;
 	top:5px;
 	right: 170px;
+	box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
 }
 /*
 .sli-links { 
