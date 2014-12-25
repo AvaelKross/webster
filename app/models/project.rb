@@ -26,6 +26,7 @@
 #  bitrix_title_template   :string(255)
 #  bitrix_comment_template :string(255)
 #  bitrix_params_template  :string(255)
+#  plain_site              :string(255)
 #
 
 require 'net/http'
@@ -47,7 +48,7 @@ class Project < ActiveRecord::Base
     params_to_be_sent = { LOGIN: "#{self.bitrix_login}", 
                PASSWORD: "#{self.bitrix_password}", 
                TITLE: "#{title}",
-               SOURCE_ID: "#{self.site}",
+               SOURCE_ID: "#{self.plain_site}",
                NAME: "#{params[:name]}",
                COMMENTS: "#{params[:comment]}",
                PHONE_OTHER: "#{params[:phone]}",

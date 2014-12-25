@@ -26,6 +26,7 @@
 #  bitrix_title_template   :string(255)
 #  bitrix_comment_template :string(255)
 #  bitrix_params_template  :string(255)
+#  plain_site              :string(255)
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
