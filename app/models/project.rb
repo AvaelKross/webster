@@ -49,6 +49,7 @@ class Project < ActiveRecord::Base
                TITLE: "#{title}",
                SOURCE_ID: "#{self.site}",
                NAME: "#{params[:name]}",
+               COMMENT: "#{params[:comment]}",
                PHONE_OTHER: "#{params[:phone]}",
                EMAIL_OTHER: "#{params[:email]}"}.merge(additional_params)
     uri.query = URI.encode_www_form(params_to_be_sent)
