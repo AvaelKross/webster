@@ -37,7 +37,7 @@ class Project < ActiveRecord::Base
 
   def create_lead(params)
     additional_params = {}
-    bitrix_params = JSON.parse proj.bitrix_params_template
+    bitrix_params = JSON.parse self.bitrix_params_template
     bitrix_params.each{|k,v| additional_params[k]=params[v.to_sym] if params[v.to_sym]}
 
     title = self.bitrix_title_template.gsub(/\{(.*?)\}/) {"#{params[$1.to_sym]}"}
