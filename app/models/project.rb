@@ -54,4 +54,6 @@ class Project < ActiveRecord::Base
     uri.query = URI.encode_www_form(params_to_be_sent)
     response = Net::HTTP.get(uri)
   end
+  handle_asynchronously :create_lead
+  
 end
