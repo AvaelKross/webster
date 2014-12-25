@@ -19,7 +19,12 @@ class GatewayController < ApplicationController
       Sender.send_sms(message)
     end
 
+    if proj.bitrix_on?
+      proj.create_lead(params)
+    end
+
     render json: {success: true}
   end
+
 
 end
