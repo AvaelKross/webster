@@ -64,6 +64,7 @@ ActiveRecord::Schema.define(version: 20141225111339) do
     t.string   "bitrix_password"
     t.string   "bitrix_title_template"
     t.string   "bitrix_comment_template"
+    t.string   "bitrix_params_template"
   end
 
   create_table "settings", force: true do |t|

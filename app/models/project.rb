@@ -25,6 +25,7 @@
 #  bitrix_password         :string(255)
 #  bitrix_title_template   :string(255)
 #  bitrix_comment_template :string(255)
+#  bitrix_params_template  :string(255)
 #
 
 require 'net/http'
@@ -36,14 +37,13 @@ class Project < ActiveRecord::Base
 
   def create_lead(params)
     additional_params = {}
-    bitrix_params_template = '{"UF_CRM_1393932509":"utm_source"}'
-    bitrix_params = JSON.parse bitrix_params_template
+    bitrix_params = JSON.parse proj.bitrix_params_template
     bitrix_params.each{|k,v| additional_params[k]=params[v.to_sym] if params[v.to_sym]}
 
     title = self.bitrix_title_template.gsub(/\{(.*?)\}/) {"#{params[$1.to_sym]}"}
     comment = self.bitrix_comment_template.gsub(/\{(.*?)\}/) {"#{params[$1.to_sym]}"}
 
-    uri = URI("#{self.bitrix_url}/crm/configs/import/lead.php")
+    uri = URI("#{self.bitrix_url}crm/configs/import/lead.php")
     params_to_be_sent = { LOGIN: "#{self.bitrix_login}", 
                PASSWORD: "#{self.bitrix_password}", 
                TITLE: "#{title}",
@@ -55,5 +55,5 @@ class Project < ActiveRecord::Base
     response = Net::HTTP.get(uri)
   end
   handle_asynchronously :create_lead
-  
+
 end

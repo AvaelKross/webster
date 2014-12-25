@@ -25,6 +25,7 @@
 #  bitrix_password         :string(255)
 #  bitrix_title_template   :string(255)
 #  bitrix_comment_template :string(255)
+#  bitrix_params_template  :string(255)
 #
 
 require 'test_helper'
