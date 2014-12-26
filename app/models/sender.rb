@@ -15,11 +15,14 @@ class Sender
 
     def send_email(message)
       project = message.project
-      UserMailer.custom_mail( project.email, 
-                              project.email_sender_email, "#{project.email_sender} <#{project.email_sender_email}>", 
-                              project.email_subject, 
-                              message.text )
-                            .deliver
+      emails = project.email.gsub(/\s+/, "").split(",")
+      emails.each do |email|
+        UserMailer.custom_mail( email, 
+                                project.email_sender_email, "#{project.email_sender} <#{project.email_sender_email}>", 
+                                project.email_subject, 
+                                message.text )
+                              .deliver
+      end
       message.update_columns(status: true)
     end
     handle_asynchronously :send_email
