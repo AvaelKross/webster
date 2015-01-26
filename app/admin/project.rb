@@ -17,6 +17,7 @@ ActiveAdmin.register Project do
     end
     f.inputs 'Emails' do
       f.input :email_on
+      f.input :email
       f.input :email_subject
       f.input :email_sender
       f.input :email_sender_email
