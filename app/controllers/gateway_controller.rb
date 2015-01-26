@@ -20,7 +20,7 @@ class GatewayController < ApplicationController
     end
 
     if proj.bitrix_on?
-      proj.create_lead(params)
+      proj.push_lead_to_bitrix(params)
     end
 
     render json: {success: true}

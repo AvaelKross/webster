@@ -27,6 +27,7 @@
 #  bitrix_comment_template :string(255)
 #  bitrix_params_template  :string(255)
 #  plain_site              :string(255)
+#  bitrix_assigned_id      :integer
 #
 
 require 'test_helper'

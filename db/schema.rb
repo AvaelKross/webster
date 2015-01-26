@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141225220529) do
+ActiveRecord::Schema.define(version: 20150126183754) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -66,6 +66,7 @@ ActiveRecord::Schema.define(version: 20141225220529) do
     t.string   "bitrix_comment_template"
     t.string   "bitrix_params_template"
     t.string   "plain_site"
+    t.integer  "bitrix_assigned_id"
   end
 
   create_table "settings", force: true do |t|

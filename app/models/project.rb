@@ -27,6 +27,7 @@
 #  bitrix_comment_template :string(255)
 #  bitrix_params_template  :string(255)
 #  plain_site              :string(255)
+#  bitrix_assigned_id      :integer
 #
 
 require 'net/http'
@@ -36,10 +37,12 @@ class Project < ActiveRecord::Base
 
   has_many :messages
 
-  def create_lead(params)
+  def push_lead_to_bitrix(params)
     additional_params = {}
     bitrix_params = JSON.parse self.bitrix_params_template
     bitrix_params.each{|k,v| additional_params[k]=params[v.to_sym] if params[v.to_sym]}
+
+    additional_params[:ASSIGNED_BY_ID] = self.bitrix_assigned_id if !self.bitrix_assigned_id.nil? && self.bitrix_assigned_id > 0
 
     title = self.bitrix_title_template.gsub(/\{(.*?)\}/) {"#{params[$1.to_sym]}"}
     comment = self.bitrix_comment_template.gsub(/\{(.*?)\}/) {"#{params[$1.to_sym]}"}
