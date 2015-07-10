@@ -2,7 +2,7 @@ class GatewayController < ApplicationController
   protect_from_forgery except: [:send_message]
 
   def send_message
-    proj = Project.where("site LIKE '%#{request.referer.split('?').first}%'").first
+    proj = Project.where("site LIKE '%?%'", request.referer.split('?').first).first
     return render json: {success: false, site: request.referer} unless proj.present?
     
     # send mail
